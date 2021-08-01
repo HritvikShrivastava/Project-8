@@ -51,7 +51,7 @@ secretLine9.visible = false
 }
 
 function draw() {
-
+background("white")
 drawSprites ()
 
 
@@ -63,6 +63,7 @@ textSize(10)
 text ("PRESS 'PLAY' TO CONTINUE", 125, 90)
 btn = createButton("PLAY")
 btn.position(165, 110)
+btn.mousePressed(btn1) 
 }
 
 
@@ -70,12 +71,12 @@ btn.position(165, 110)
 else if (gameState === "play") {
 
   if (keyPressed("left")) {
-    player.VelocityX = -10
+    player.velocityX = -5
   }
 
 }  
 }
 
-function btn () {
+function btn1 () {
   gameState = "play"
 }
